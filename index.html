@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA VIE ENR HAIR AI | 프리미엄 헤어스타일 시뮬레이터</title>
+    <title>LA VIE EN HAIR AI | 프리미엄 헤어스타일 시뮬레이터</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -26,17 +26,16 @@
         <nav class="nav-container">
             <div class="logo">
                 <span class="logo-icon">✧</span>
-                <span class="logo-text">LA VIE ENR</span>
-                <span class="logo-sub">HAIR AI</span>
+                <span class="logo-text">LA VIE EN HAIR AI</span>
                 <span class="logo-icon">✧</span>
             </div>
             <div class="nav-links">
                 <a href="#home" class="nav-link active">홈</a>
                 <a href="#transform" class="nav-link">스타일 변환</a>
-                <a href="#styles" class="nav-link">스타일북</a>
+                <a href="#styles" class="nav-link">스��일북</a>
             </div>
             <div class="nav-actions">
-                <button class="admin-btn" id="admin-btn" title="스타일북 관리">
+                <button class="admin-btn" id="admin-btn" title="스타일 관리">
                     <i class="fas fa-cog"></i>
                 </button>
             </div>
@@ -47,7 +46,7 @@
     <section id="home" class="hero-section">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <div class="hero-badge">✦ AI POWERED STYLING ✦</div>
+            <div class="hero-badge">✦ PREMIUM AI STYLING ✦</div>
             <h1 class="hero-title">
                 <span class="title-line">새로운 나를</span>
                 <span class="title-line gold-text">미리 만나보세요</span>
@@ -61,6 +60,21 @@
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
+        <div class="hero-visual">
+            <div class="visual-card">
+                <div class="card-before">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Before">
+                    <span class="card-tag">BEFORE</span>
+                </div>
+                <div class="card-arrow">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <div class="card-after">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300" alt="After">
+                    <span class="card-tag">AFTER</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- 변환 섹션 -->
@@ -69,73 +83,75 @@
             <div class="section-header">
                 <span class="section-badge">TRANSFORM</span>
                 <h2 class="section-title">스타일 변환</h2>
-                <p class="section-subtitle">사진을 업로드하고 원하는 스타일을 선택하세요</p>
+                <p class="section-subtitle">내 사진과 원하는 스타일을 선택하세요</p>
             </div>
 
             <div class="transform-container">
                 <!-- 왼쪽: 내 사진 업로드 -->
-                <div class="upload-panel">
+                <div class="photo-panel">
                     <div class="panel-header">
-                        <span class="step-number">1</span>
+                        <span class="step-badge">STEP 1</span>
                         <h3>내 사진</h3>
                     </div>
-                    <div class="upload-box" id="my-photo-upload">
+                    <div class="photo-box" id="my-photo-upload">
                         <input type="file" id="my-photo-input" accept="image/*" hidden>
-                        <div class="upload-placeholder" id="my-photo-placeholder">
-                            <div class="upload-icon">
+                        <div class="photo-placeholder" id="my-photo-placeholder">
+                            <div class="photo-icon">
                                 <i class="fas fa-camera"></i>
                             </div>
-                            <p class="upload-text">클릭하거나 드래그하여 업로드</p>
-                            <span class="upload-hint">정면 얼굴 사진 권장</span>
+                            <p class="photo-text">클릭하여 업로드</p>
+                            <span class="photo-hint">정면 얼굴 사진 권장</span>
                         </div>
-                        <div class="upload-preview hidden" id="my-photo-preview">
+                        <div class="photo-preview hidden" id="my-photo-preview">
                             <img src="" alt="내 사진" id="my-photo-img">
                             <button class="remove-btn" id="remove-my-photo">
                                 <i class="fas fa-times"></i>
                             </button>
-                            <span class="photo-label">BEFORE</span>
+                            <span class="photo-label">MY PHOTO</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 중앙: 변환 버튼 -->
                 <div class="transform-action">
-                    <div class="arrow-flow">
+                    <div class="arrow-decoration">
                         <div class="arrow-line"></div>
                         <button class="transform-btn" id="transform-btn" disabled>
-                            <div class="btn-inner">
-                                <i class="fas fa-magic"></i>
-                                <span>변환</span>
-                            </div>
+                            <i class="fas fa-magic"></i>
+                            <span>변환</span>
                         </button>
                         <div class="arrow-line"></div>
                     </div>
-                    <p class="transform-status" id="transform-status">사진과 스타일을 선택하세요</p>
                 </div>
 
                 <!-- 오른쪽: 선택한 스타일 -->
-                <div class="style-panel">
+                <div class="photo-panel">
                     <div class="panel-header">
-                        <span class="step-number">2</span>
-                        <h3>선택한 스타일</h3>
+                        <span class="step-badge">STEP 2</span>
+                        <h3>원하는 스타일</h3>
                     </div>
-                    <div class="style-box" id="style-box">
-                        <div class="style-placeholder" id="style-placeholder">
-                            <div class="style-icon">
+                    <div class="photo-box style-box" id="style-display-box">
+                        <div class="photo-placeholder" id="style-display-placeholder">
+                            <div class="photo-icon">
                                 <i class="fas fa-cut"></i>
                             </div>
-                            <p>아래에서 스타일을 선택하세요</p>
+                            <p class="photo-text">스타일을 선택하세요</p>
+                            <span class="photo-hint">아래에서 스타일 선택</span>
                         </div>
-                        <div class="style-preview hidden" id="style-preview">
-                            <img src="" alt="선택한 스타일" id="selected-style-img">
-                            <button class="remove-btn" id="remove-style">
+                        <div class="photo-preview hidden" id="style-display-preview">
+                            <img src="" alt="선택한 스타일" id="style-display-img">
+                            <button class="remove-btn" id="clear-style-btn">
                                 <i class="fas fa-times"></i>
                             </button>
-                            <span class="photo-label">STYLE</span>
-                            <span class="style-name-tag" id="style-name-tag">스타일명</span>
+                            <span class="photo-label" id="style-display-name">STYLE</span>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- 변환 상태 -->
+            <div class="transform-status-bar">
+                <p id="transform-status">사진과 스타일을 선택하세요</p>
             </div>
         </div>
     </section>
@@ -145,45 +161,46 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">STYLE BOOK</span>
-                <h2 class="section-title">스타일북</h2>
-                <p class="section-subtitle">원하는 스타일을 선택하세요</p>
+                <h2 class="section-title">스타일 선택</h2>
+                <p class="section-subtitle">원하는 스타일을 클릭하세요</p>
             </div>
 
-            <!-- 성별 선택 -->
-            <div class="gender-tabs" id="gender-tabs">
-                <!-- 동적 생성 -->
+            <!-- 성별 탭 -->
+            <div class="gender-tabs">
+                <button class="gender-tab active" data-gender="male">
+                    <i class="fas fa-mars"></i>
+                    <span>남자</span>
+                </button>
+                <button class="gender-tab" data-gender="female">
+                    <i class="fas fa-venus"></i>
+                    <span>여자</span>
+                </button>
             </div>
 
             <!-- 카테고리 탭 -->
             <div class="category-tabs" id="category-tabs">
-                <!-- 동적 생성 -->
-            </div>
-
-            <!-- 커스텀 업로드 옵션 -->
-            <div class="custom-upload-option">
-                <button class="custom-upload-btn" id="custom-upload-btn">
-                    <i class="fas fa-upload"></i>
-                    <span>직접 스타일 사진 업로드</span>
-                </button>
-                <input type="file" id="custom-style-input" accept="image/*" hidden>
+                <!-- 동적으로 생성됨 -->
             </div>
 
             <!-- 스타일 그리드 -->
             <div class="styles-grid" id="styles-grid">
-                <!-- 동적 생성 -->
+                <!-- 동적으로 생성됨 -->
             </div>
 
-            <!-- 스타일 없을 때 -->
-            <div class="empty-styles hidden" id="empty-styles">
-                <i class="fas fa-folder-open"></i>
-                <p>등록된 스타일이 없습니다</p>
-                <span>관리자 설정에서 스타일을 추가해주세요</span>
+            <!-- 커스텀 업로드 영역 -->
+            <div class="custom-upload-section">
+                <h4>또는 직접 업로드</h4>
+                <div class="custom-upload-box" id="custom-style-upload">
+                    <input type="file" id="custom-style-input" accept="image/*" hidden>
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>원하는 스타일 사진 업로드</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 결과 섹션 (하단 비교) -->
-    <section id="result-section" class="result-section hidden">
+    <!-- 결과 섹션 (비교 슬라이더) -->
+    <section id="result" class="result-section hidden">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">RESULT</span>
@@ -191,15 +208,14 @@
                 <p class="section-subtitle">슬라이더를 움직여 비교해보세요</p>
             </div>
 
-            <!-- 비교 슬라이더 -->
-            <div class="comparison-wrapper">
+            <div class="comparison-container">
                 <div class="comparison-slider" id="comparison-slider">
                     <div class="comparison-before">
-                        <img src="" alt="Before" id="result-before-img">
+                        <img src="" alt="Before" id="compare-before-img">
                         <span class="comparison-label">BEFORE</span>
                     </div>
                     <div class="comparison-after">
-                        <img src="" alt="After" id="result-after-img">
+                        <img src="" alt="After" id="compare-after-img">
                         <span class="comparison-label">AFTER</span>
                     </div>
                     <div class="slider-handle" id="slider-handle">
@@ -212,7 +228,6 @@
                 </div>
             </div>
 
-            <!-- 결과 액션 버튼 -->
             <div class="result-actions">
                 <button class="action-btn" id="download-result-btn">
                     <i class="fas fa-download"></i>
@@ -232,109 +247,81 @@
 
     <!-- 관리자 모달 -->
     <div class="modal hidden" id="admin-modal">
-        <div class="modal-content admin-modal-content">
-            <button class="modal-close" id="admin-modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <h3 class="modal-title">
-                <i class="fas fa-cog"></i>
-                스타일북 관리
-            </h3>
-
-            <!-- 탭: 성별/카테고리 관리 | 스타일 관리 -->
-            <div class="admin-main-tabs">
-                <button class="admin-main-tab active" data-tab="category-manage">
-                    <i class="fas fa-folder-plus"></i>
-                    카테고리 관리
-                </button>
-                <button class="admin-main-tab" data-tab="style-manage">
-                    <i class="fas fa-images"></i>
-                    스타일 관리
+        <div class="modal-overlay" id="admin-modal-overlay"></div>
+        <div class="modal-content admin-modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-cog"></i> 스타일 관리</h3>
+                <button class="modal-close" id="admin-modal-close">
+                    <i class="fas fa-times"></i>
                 </button>
             </div>
-
-            <!-- 카테고리 관리 탭 내용 -->
-            <div class="admin-tab-content active" id="category-manage-content">
-                <!-- 성별 관리 -->
-                <div class="admin-section">
-                    <div class="admin-section-header">
-                        <h4><i class="fas fa-venus-mars"></i> 성별 관리</h4>
-                        <button class="add-btn" id="add-gender-btn">
-                            <i class="fas fa-plus"></i> 추가
-                        </button>
-                    </div>
-                    <div class="admin-list" id="gender-list">
-                        <!-- 동적 생성 -->
-                    </div>
+            
+            <div class="modal-body">
+                <!-- 성별 선택 -->
+                <div class="admin-gender-select">
+                    <button class="admin-gender-btn active" data-gender="male">
+                        <i class="fas fa-mars"></i> 남자
+                    </button>
+                    <button class="admin-gender-btn" data-gender="female">
+                        <i class="fas fa-venus"></i> 여자
+                    </button>
                 </div>
 
                 <!-- 카테고리 관리 -->
                 <div class="admin-section">
                     <div class="admin-section-header">
-                        <h4><i class="fas fa-tags"></i> 카테고리 관리</h4>
-                    </div>
-                    <div class="category-manager">
-                        <div class="category-gender-select">
-                            <label>성별 선택:</label>
-                            <select id="category-gender-select">
-                                <!-- 동적 생성 -->
-                            </select>
-                        </div>
-                        <div class="category-add-row">
-                            <input type="text" id="new-category-input" placeholder="새 카테고리 이름 (예: 컷, 펌, 염색)">
-                            <button class="add-btn" id="add-category-btn">
-                                <i class="fas fa-plus"></i> 추가
-                            </button>
-                        </div>
-                        <div class="admin-list" id="category-list">
-                            <!-- 동적 생성 -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 스타일 관리 탭 내용 -->
-            <div class="admin-tab-content" id="style-manage-content">
-                <div class="style-manager">
-                    <!-- 성별/카테고리 선택 -->
-                    <div class="style-filter-row">
-                        <div class="filter-group">
-                            <label>성별:</label>
-                            <select id="style-gender-select">
-                                <!-- 동적 생성 -->
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                            <label>카테고리:</label>
-                            <select id="style-category-select">
-                                <!-- 동적 생성 -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- 스타일 업로드 -->
-                    <div class="style-upload-area">
-                        <input type="file" id="admin-style-input" accept="image/*" multiple hidden>
-                        <button class="style-upload-btn" id="admin-upload-btn">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <span>스타일 사진 추가</span>
-                            <small>여러 장 선택 가능</small>
+                        <h4>카테고리 관리</h4>
+                        <button class="add-btn" id="add-category-btn">
+                            <i class="fas fa-plus"></i> 카테고리 추가
                         </button>
                     </div>
+                    <div class="admin-categories" id="admin-categories">
+                        <!-- 동적으로 생성됨 -->
+                    </div>
+                </div>
 
-                    <!-- 스타일 목록 -->
-                    <div class="admin-styles-grid" id="admin-styles-grid">
-                        <!-- 동적 생성 -->
+                <!-- 스타일 관리 -->
+                <div class="admin-section">
+                    <div class="admin-section-header">
+                        <h4>스타일 관리 <span id="current-category-name"></span></h4>
+                        <button class="add-btn" id="add-style-btn">
+                            <i class="fas fa-plus"></i> 스타일 추가
+                        </button>
+                        <input type="file" id="admin-style-input" accept="image/*" multiple hidden>
+                    </div>
+                    <div class="admin-styles" id="admin-styles">
+                        <!-- 동적으로 생성됨 -->
                     </div>
                 </div>
             </div>
 
-            <!-- 저장 버튼 -->
-            <div class="admin-footer">
+            <div class="modal-footer">
                 <button class="save-btn" id="admin-save-btn">
-                    <i class="fas fa-save"></i>
-                    모든 변경사항 저장
+                    <i class="fas fa-save"></i> 저장하기
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 카테고리 추가 모달 -->
+    <div class="modal hidden" id="category-modal">
+        <div class="modal-overlay" id="category-modal-overlay"></div>
+        <div class="modal-content small-modal">
+            <div class="modal-header">
+                <h3>카테고리 추가</h3>
+                <button class="modal-close" id="category-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>카테고리 이름</label>
+                    <input type="text" id="new-category-input" placeholder="예: 컷, 펌, 염색...">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn" id="category-cancel-btn">취소</button>
+                <button class="confirm-btn" id="category-confirm-btn">추가</button>
             </div>
         </div>
     </div>
@@ -344,12 +331,14 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <span class="logo-icon">✧</span>
-                <span class="logo-text">LA VIE ENR</span>
-                <span class="logo-sub">HAIR AI</span>
+                <span class="logo-text">LA VIE EN HAIR AI</span>
                 <span class="logo-icon">✧</span>
             </div>
             <p class="footer-text">AI로 완성하는 당신만의 퍼펙트 스타일</p>
-            <p class="footer-copyright">© 2024 LA VIE ENR HAIR AI. Powered by Gemini AI</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="footer-copyright">© 2024 LA VIE EN HAIR AI. Powered by Gemini AI</p>
         </div>
     </footer>
 
