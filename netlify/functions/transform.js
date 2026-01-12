@@ -53,20 +53,19 @@ exports.handler = async (event, context) => {
 
         console.log('Starting transformation...');
 
-        const prompt = `You are an expert hairstyle transformation AI. 
+        // 사용자 지정 프롬프트
+        const prompt = `첫번째 사진의 머리스타일을 기장(머리길이)와 숱을 감안해서 제시한 두번째 사진의 여성 머리스타일로 변경해줘.
+염색 즉 머리색상은 구현하지마. 원래 머리색을 유지해.
 
-Look at these two images:
-1. First image: A person's photo (keep this face exactly)
-2. Second image: A hairstyle reference (copy this hairstyle)
+중요한 규칙:
+- 첫번째 사진의 얼굴, 피부, 표정은 절대 변경하지 마
+- 첫번째 사진의 원래 머리 색상을 그대로 유지해
+- 두번째 사진의 헤어스타일(컷, 펌, 웨이브, 볼륨 등)만 적용해
+- 첫번째 사진의 머리 기장과 숱을 고려해서 자연스럽게 변환해
+- 배경과 조명은 첫번째 사진과 동일하게 유지해
+- 결과물은 실제 사진처럼 자연스럽고 현실적이어야 해
 
-Generate a new photorealistic image where:
-- The person's face, skin, expression stay EXACTLY the same
-- ONLY change the hair to match the reference hairstyle
-- Match the hair color, length, texture, and style from the reference
-- Keep original photo's background and lighting
-- Make it look completely natural and realistic
-
-Output a single transformed image.`;
+Generate a photorealistic transformed image.`;
 
         // Request body for Gemini 2.0 Flash with image generation
         const requestBody = {
