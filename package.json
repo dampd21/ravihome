@@ -1,0 +1,8 @@
+{
+  "name": "la-vie-enr-hair-ai",
+  "version": "1.0.0",
+  "description": "AI Hair Style Simulator powered by Gemini",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0"
+  }
+}
