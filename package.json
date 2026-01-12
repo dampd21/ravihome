@@ -1,8 +1,29 @@
 {
   "name": "la-vie-enr-hair-ai",
   "version": "1.0.0",
-  "description": "AI Hair Style Simulator powered by Gemini",
+  "description": "AI 헤어스타일 가상체험 웹앱",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "hair",
+    "ai",
+    "virtual",
+    "styling",
+    "gemini"
+  ],
+  "author": "LA VIE ENR",
+  "license": "MIT",
   "dependencies": {
-    "@google/generative-ai": "^0.21.0"
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
